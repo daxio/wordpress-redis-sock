@@ -11,4 +11,4 @@ RUN apt-get update && apt-get install -y \
 RUN pecl install redis-4.2.0 imagick-3.4.3 libsodium-2.0.21 \
         && docker-php-ext-enable redis imagick sodium \
         && docker-php-ext-install -j$(nproc) exif gettext intl sockets zip \
-        && sed -i -e ‘/listen/d’ /usr/local/etc/php-fpm.d/zz-docker.conf
+        && sed -i -e '/listen/d' /usr/local/etc/php-fpm.d/zz-docker.conf
